@@ -30,30 +30,30 @@ class Game {
 
     cars = [car1, car2];
 
-   //Creating Group for Fuel and PowerCoins
+    //Creating Group for Fuel and PowerCoins
     fuels = new Group();
     powerCoins = new Group();
 
     // Adding fuel sprite in the game
-    this.addSpirtes(fuels, 4, fuelImage, 0.02);
+    this.addSprites(fuels, 4, fuelImage, 0.02);
 
     // Adding coin sprite in the game
-    this.addSpirtes(powerCoins, 18, powerCoinImage, 0.09);
+    this.addSprites(powerCoins, 18, powerCoinImage, 0.09);
   }
 
   // Creating Sprites at random position in a loop
-  addSpirtes(spriteGroup, numberOfSprites, spirteImage, scale) {
+  addSprites(spriteGroup, numberOfSprites, spriteImage, scale) {
     for (var i = 0; i < numberOfSprites; i++) {
       var x, y;
 
       x = random(width / 2 + 150, width / 2 - 150);
       y = random(-height * 4.5, height - 400);
 
-      var spirte = createSprite(x, y);
-      spirte.addImage("spirte", spirteImage);
+      var sprite = createSprite(x, y);
+      sprite.addImage("sprite", spriteImage);
 
-      spirte.scale = scale;
-      spriteGroup.add(spirte);
+      sprite.scale = scale;
+      spriteGroup.add(sprite);
     }
   }
 
@@ -83,7 +83,6 @@ class Game {
 
         cars[index - 1].position.x = x;
         cars[index - 1].position.y = y;
-      
       }
 
       // handling keyboard events
@@ -96,13 +95,7 @@ class Game {
     }
   }
 
-  
-  handleFuel(index) {
+  handleFuel(index) {}
 
-  }
-
- 
-  handlePowerCoins(index) {
-
-  }
+  handlePowerCoins(index) {}
 }
